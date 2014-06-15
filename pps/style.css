@@ -7,7 +7,11 @@ Author URI: http://www.ott.net/
 Version: 0.4.3
 */
 
-li,ul {
+:root {
+	--hnavbg: linear-gradient(to bottom, #eb8801, #e8c346);
+}
+
+li, ul {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -52,7 +56,7 @@ textarea {
 
 #page {
 	background-color: #EEB50C;
-	background-image: url('images/bgmid.jpg');
+	background-image: url('https://www.piratenpartei.ch/wp-content/themes/pps/images/bgmid.jpg');
 	background-repeat: repeat-x;
 	background-attachment: absolute;
 	background-position: center top;
@@ -62,21 +66,30 @@ textarea {
 #header {
 	position: relative;
 	margin: 0 auto;
-	width: 968px;
+	width: 960px;
 }
 
 #main {
 	position: relative;
-	background-image: url('images/content-bg.png');
-	margin-top: 0;
-	border-top: none;
-	padding-top: 20px;
 	z-index: 20;
+	-webkit-box-shadow: 0 2px 4px 2px #d97c10;
+	-moz-box-shadow: 0 2px 4px 2px #d97c10;
+	box-shadow: 0 2px 4px 2px #d97c10;
+	background-color: #FBF8F2;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
 }
 
 #content {
 	padding: 0 25px;
-	width: 656px;
+	width: 650px;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 }
 
 iframe {
@@ -110,34 +123,34 @@ div.quickProfile {
 
 /* the top bar */
 
-div#bar {
+#bar {
 	background-color: #4C4642;
 	border-bottom: 1px solid #47403C;
 	height: 20px;
 	width: 100%;
 }
 
-ul#bar-inner {
+#bar-inner {
 	margin: auto;
 	width: 968px;
 }
 
-ul#bar-inner li {
+#bar-inner li {
 	display: inline;
 	float: left;
 	list-style-type: none;
 	padding-right: 12px;
 }
 
-ul#bar-inner li:last-child {
+#bar-inner li:last-child {
 	float: right;
 }
 
-ul#bar-inner .widget-title, ul#bar-inner li.home {
+#bar-inner .widget-title, ul#bar-inner li.home {
 	display: none;
 }
 
-ul#bar-inner a {
+#bar-inner a {
 	color: #ccc;
 	font-size: 11px;
 	line-height: 20px;
@@ -145,38 +158,38 @@ ul#bar-inner a {
 	text-transform: uppercase;
 }
 
-ul#bar-inner a:hover {
+#bar-inner a:hover {
 	color: #e79928;
 }
 
 /* the navigation menu */
 
-#premenu {
-	background-image: url('images/bodertop.png');
-	height: 4px;
-}
-
-div#navigation {
+#navigation {
 	position: relative;
-	padding: 0 0 0 4px;
-	margin: 0;
-	background-image: url('images/navline-vert.png');
-	background-repeat: repeat-y;
 	float: left;
 	z-index: 10;
 	width: 978px;
 }
 
 div.menu {
-	background-image: url('images/hnavbg.png');
 	background-color: #e8c346;
+	background-image: url('https://www.piratenpartei.ch/wp-content/themes/pps/images/hnavbg.png');
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb8801', endColorstr='#e8c346');
+	background-image: -moz-linear-gradient(top, #eb8801, #e8c346);
+	background-image: -webkit-linear-gradient(top, #eb8801, #e8c346);
+	background-image: -o-linear-gradient(top, #eb8801, #e8c346);
+	background-image: linear-gradient(to bottom, #eb8801, #e8c346);
+	background-image: var(--hnavbg);
+	-webkit-box-shadow: 0 -2px 4px 2px #d97c10;
+	-moz-box-shadow: 0 -2px 4px 2px #d97c10;
+	box-shadow: 0 -2px 4px 2px #d97c10;
 	clear: both;
 	float: left;
 	background-repeat: repeat-x;
 }
 
 div.menu > ul {
-	background-image: url('images/navline-vert-dividers.png');
+	background-image: url('https://www.piratenpartei.ch/wp-content/themes/pps/images/navline-vert-dividers.png');
 	background-position: -10px 0;
 	float: left;
 	list-style: none;
@@ -241,7 +254,7 @@ div.menu ul.sub-menu a {
 
 div.menu ul.children li,
 div.menu ul.sub-menu li {
-	background-image: url('images/hnav-subpfeile.png');
+	background-image: url('https://www.piratenpartei.ch/wp-content/themes/pps/images/hnav-subpfeile.png');
 	background-repeat: no-repeat;
 	padding-left: 7px;
 	background-position: 0 4px;
@@ -255,6 +268,14 @@ div.menu ul.sub-menu li:hover {
 
 #container {
 	float: left;
+	background-color: #ffffff;
+	padding-top: 40px;
+	border-right: 1px solid #F2E9DE;
+	-webkit-box-ordinal-group: 1;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	-moz-box-ordinal-group: 1;
+	order: 1;
 }
 
 /* the sidebar */
@@ -262,9 +283,14 @@ div.menu ul.sub-menu li:hover {
 #sidebar {
 	float: right;
 	/*display: inline;*/
-	width: 210px;
-	padding-bottom: 30px;
-	padding-right: 28px;
+	width: 209px;
+	padding: 40px 25px 30px 25px;
+	background-color: #fbf8f2;
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	-moz-box-ordinal-group: 2;
+	order: 2;
 }
 
 #sidebar a {
@@ -314,7 +340,7 @@ div.menu ul.sub-menu li:hover {
 /* footer */
 
 #pageend {
-	background-image: url('images/bgfot.jpg');
+	background-image: url('https://www.piratenpartei.ch/wp-content/themes/pps/images/bgfot.jpg');
 	background-repeat: repeat-x;
 	height: 124px;
 	background-color: #d78215;
@@ -325,7 +351,7 @@ div.menu ul.sub-menu li:hover {
 #pageend .content {
 	width: 920px;
 	margin: 0 auto;
-	background-image: url('images/cc-low.png');
+	background-image: url('https://www.piratenpartei.ch/wp-content/themes/pps/images/cc-low.png');
 	background-repeat: no-repeat;
 	padding-left: 40px;
 	height: 40px;
@@ -389,14 +415,14 @@ blockquote {
 #comments .navigation {
 	padding: 0 0 18px 0;
 }
-h3#comments-title,
-h3#reply-title {
+#comments-title,
+#reply-title {
 	color: #000;
 	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 0;
 }
-h3#comments-title {
+#comments-title {
 	padding: 24px 0;
 }
 .commentlist {
@@ -525,7 +551,7 @@ input[type=submit] {
 .children #respond {
 	margin: 0 48px 0 0;
 }
-h3#reply-title {
+#reply-title {
 	margin: 18px 0;
 }
 #comments-list #respond {
@@ -576,7 +602,6 @@ h3#reply-title {
 #main {
 	clear: both;
 	overflow: hidden;
-	padding: 40px 0 0 0;
 }
 #content {
 	margin-bottom: 36px;
